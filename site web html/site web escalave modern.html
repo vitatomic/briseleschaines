@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plongez dans les réalités de l'esclavage moderne et du travail des enfants , une expérience immersive pour comprendre et agir.">
+    <meta name="keywords" content="esclavage moderne, travail des enfants, exploitation, justice sociale, action collective">
+    <title>Brises les chaîne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="particles-js" class="background-image"></div>
+
+    <!-- Overlay pour Crédits -->
+    <div id="credits-overlay">
+        <div class="credits-content">
+            <h2>Crédits</h2>
+            <p><strong>Créateurs :</strong></p>
+            <ul>
+                <li>Kane - Développeur Principal</li>
+                <li>Zack - Rédaction du document projet</li>
+                <li>Titouan - Rédaction du document projet</li>
+                <li>Sacha - Conception du design</li>
+                <li>Matteo - Rédaction des textes du site</li>
+            </ul>
+            <p><strong>Technologies utilisées :</strong></p>
+            <div class="tech-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <button class="close-credits-btn">✖</button>
+        </div>
+    </div>
+
+    <!-- Overlay pour Aide -->
+    <div id="help-overlay">
+        <div class="credits-content">
+            <h2>Aide</h2>
+            <p><strong> comment utiliser le site web</strong></p>
+            <ul>
+                <li><strong>Démarrer :</strong> Cliquez sur la boîte centrale pour lancer l'expérience après la vidéo d'introduction.</li>
+                <li><strong>Explorer :</strong> Cliquez sur les cartes rotatives pour découvrir des informations détaillées.</li>
+                <li><strong>Navigation :</strong> Utilisez la barre en haut ou le menu burger sur mobile.</li>
+                <li><strong>Fermer :</strong> Cliquez sur "✖" ou en dehors des overlays pour les fermer.</li>
+                <li><strong>Interagir :</strong> Passez la souris pour voir des animations.</li>
+            </ul>
+            <p><strong>Conseil :</strong> Explorez chaque carte pour agir contre ces injustices !</p>
+            <button class="close-credits-btn">✖</button>
+        </div>
+    </div>
+
+    <!-- Overlay pour Contact -->
+    <div id="contact-overlay">
+        <div class="credits-content">
+            <h2>Contact</h2>
+            <p><strong>Nous joindre :</strong></p>
+            <ul>
+                <li><a href="kane.dev@outlook.fr">kane.dev@outlook.fr (dev)</a></li>
+                <li><a href="tel:+33972345678">+02 97 63 14 63 (Lycée St Joseph La Salle)</a></li>
+            </ul>
+            
+            <button class="close-credits-btn">✖</button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#" id="credits-link">Crédits</a></li>
+            <li><a href="#" id="help-link">Aide</a></li>
+            <li><a href="#" id="contact-link">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Introduction -->
+    <div class="intro-screen">
+        <video autoplay muted loop id="myVideo">
+            <source src="Design sans titre.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="glass-box">
+            <h1>Réveillez-vous !</h1>
+            <p>Découvrez la vérité sur l'esclavage moderne et engagez-vous pour la liberté.</p>
+        </div>
+    </div>
+
+    <!-- Overlay Plein Écran -->
+    <div id="fullscreen-overlay">
+        <div class="fullscreen-content">
+            <i id="fullscreen-icon"></i>
+            <h2 id="fullscreen-title"></h2>
+            <p id="fullscreen-text-content"></p>
+            <button class="close-btn">✖</button>
+        </div>
+    </div>
+
+    <!-- Cartes -->
+    <div class="wrapper">  
+        <div class="inner" style="--quantity: 6;">
+            <div class="card" data-fullscreen="esclavage">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <span class="emoji">⛓</span>
+                <h1>Esclavage Moderne</h1>
+                <p>40 millions de personnes sont encore esclaves aujourd'hui.</p>
+            </div>
+            <div class="card" data-fullscreen="travail">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <i class="fas fa-child"></i>
+                <h1>Travail des Enfants</h1>
+                <p>152 millions d'enfants travaillent dans des conditions inhumaines.</p>
+            </div>
+            <div class="card" data-fullscreen="opposer">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <i class="fas fa-fist-raised"></i>
+                <h1>S'opposer</h1>
+                <p>Résister aux injustices et dénoncer l'exploitation.</p>
+            </div>
+            <div class="card" data-fullscreen="survivre">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <i class="fas fa-heartbeat"></i>
+                <h1>Survivre</h1>
+                <p>Endurer et surmonter les conditions inhumaines.</p>
+            </div>
+            <div class="card" data-fullscreen="revolter">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <i class="fas fa-bullhorn"></i>
+                <h1>Se Révolter</h1>
+                <p>Se lever contre l'oppression pour la liberté.</p>
+            </div>
+            <div class="card" data-fullscreen="action">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <i class="fas fa-hands-helping"></i>
+                <h1>Agir</h1>
+                <p>Devenez acteur du changement dès maintenant.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Brises les chaîne
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="scrypt.js"></script>
+</body>
+</html>
